@@ -1,0 +1,13 @@
+<h1>Lists#show</h1>
+<p>Find me in app/views/lists/show.html.erb</p>
+
+<p>List: <%= @list.name %><br></p>
+<% @movies.each do |movie| %>
+<p>Movie: <%= movie.title %><br></p>
+<p>Overview: <%= movie.overview %><br></p>
+<img src= '<%= movie.poster_url %>' alt="#", style="width: 200px">
+<%= button_to 'Destroy bookmark', bookmark_path(movie.bookmark_ids.first), method: :delete, data: {confirm: 'Are you sure?'} %>
+<% end %>
+
+<%= button_to "Delete list", list_path(@list), method: :delete %><br><br>
+<%= link_to "Bookmark a movie", new_list_bookmark_path(@list) %><br>
