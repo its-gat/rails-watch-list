@@ -9,6 +9,8 @@
 #   end
 
 puts 'dropping db'
+List.destroy_all
+Bookmark.destroy_all
 Movie.destroy_all
 puts 'db dropped'
 
