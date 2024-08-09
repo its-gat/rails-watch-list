@@ -34,6 +34,6 @@ class ListsController < ApplicationController
   end
 
   def strong_params
-    params.require(:list).permit(:name, :photo)
+    params.require(:list).permit(:name, :banner_image)
   end
 end
