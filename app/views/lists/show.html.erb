@@ -18,7 +18,7 @@
 <%= button_to "Delete list", list_path(@list), method: :delete %><br><br>
 <%= link_to "Bookmark a movie", new_list_bookmark_path(@list) %><br>
 
-<%= cl_image_tag "o58flzxbivn12n0bo9in", width: 150, height: 150, crop: :thumb, gravity: :face %>
+<img src="https://res.cloudinary.com/dtqkkwqsx/image/upload/fl_preserve_transparency/v1723201201/o58flzxbivn12n0bo9in.jpg?_s=public-apps", width=300, height=auto>
 
 <% if @list.banner_image.attached? %>
   <%= cl_image_tag @list.banner_image.key, height: 300, width: 400, crop: :fill %>
